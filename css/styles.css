@@ -53,6 +53,18 @@ header {
 .attribute {
   display: flex;
   flex-direction: row;
+  padding: 0 200px;
+  color: grey;
+}
+.a-box {
+  margin: 20px;
+  padding: 20px 55px;
+}
+.b {
+  border-right: solid;
+}
+.a-box img {
+  max-width: 100px;
 }
 /* collection section */
 .collects {
@@ -65,24 +77,27 @@ header {
   grid-gap: 30px;
 }
 .box {
-  height: 300px;
+  height: 200px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-.box h2, a {
-  margin-left: 300px;
-  margin-top: 100px;
+.left h2, .left a {
+  margin: 100px 0 0 300px;
+}
+.right h2, .right a {
+  margin: 100px 0 0 100px;
 }
 .sofa {
-  background: url("../images/sofa.jpg") no-repeat center center/cover;
+  background-image: linear-gradient(to right bottom, yellow, white);
 }
 .bed {
-  background: url("../images/bed.jpeg") no-repeat center center/cover;
+  background-image: linear-gradient(to left bottom, grey, white);
 }
 .chair {
-  background: url("../images/chair-collection.jpg") no-repeat center center/cover;
+
+  background-image: linear-gradient(to right bottom, pink, white);
 }
 .cabinet {
-  background: url("../images/cabinet-collection.jpg") no-repeat center center/cover;
+  background-image: linear-gradient(to right bottom, orange, white);
 }
 .btn-1 {
   background-color: #682D63;
@@ -97,15 +112,36 @@ header {
   color: #682D63;
   margin-left: 600px;
 }
-* {
-  box-sizing: border-box;
-}
 /* slideshow container */
 .features {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  padding: 0 70px 70px;
+}
+.card-f {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  max-width: 300px;
+  max-height: 550px;
+  margin: auto;
+  transition: 0.3s;
+}
+.card-f img {
+  width: 100%;
+  height: 400px;
+}
+.container-f {
+  height: 150px;
+  padding: 2px 20px;
+}
+.price {
+  font-size: 25px;
+  color: #682D63;
+}
+.over {
+  margin-left: 15px;
+  text-decoration: line-through;
 }
 /* Advert section */
 .advert {
@@ -121,35 +157,51 @@ header {
   width: 300px;
 }
 /* Blog section */
+.blog {
+  margin-bottom: 60px;
+}
+.blog h2 {
+  color: #682D63;
+  margin-left: 650px;
+}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  max-width: 300px;
-  max-height: 500px;
+  max-width: 550px;
+  max-height: 450px;
   margin: auto;
   transition: 0.3s;
+  border-bottom-left-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
 }
 .card img {
   width: 100%;
+  height: 300px;
 }
 .container {
-  padding: 2px 16px;
+  height: 150px;
+  padding: 10px 45px;
 }
 .blog-post {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 0 100px;
 }
 .btn-2 {
-  border: #682D63;
-  width: 100px;
-  padding: 4%;
+  background: transparent;
+  border: solid 1.5px #682D63;
+  width: 175px;
+  margin-top: 10px;
+  padding: 1.5%;
 }
 .btn-3 {
-  border: solid 5px #682D63;
+  border: solid 3px #682D63;
   background: transparent;
   color: #682D63;
-  width: 175px;
-  margin-left: 200px;
+  width: 225px;
+  margin-left: 550px;
+  margin-top: 50px;
+  padding: 1.5%;
 }
 /* client feeback section */
 .feedback-section {
@@ -157,12 +209,20 @@ header {
   color: #DEEFB7;
 }
 .feedback-section h3 {
-  padding: 3% 40%;
-  text-decoration-line: underline;
+  margin: 0;
+  padding: 35px 515px 5px;
+  font-size: 30px;
+  color: white;
+}
+hr {
+  border-top: 2px solid #DEEFB7;
+  width: 125px;
+  margin-top: 0;
 }
 .client-feedback {
   display: flex;
   flex-direction: row;
+  padding: 20px 100px;
 }
 .feedback {
   display: flex;
@@ -170,26 +230,73 @@ header {
 }
 .feedback img {
   border-radius: 100%;
-  width: 30px;
-  height: 30px;
+  width: 130px;
+  height: 130px;
+  padding: 1.5%;
+  border: 2px solid #DEEFB7;
 }
 .text {
   width: 450px;
+  padding-left: 20px;
+  margin-top: 0;
+  color: white;
 }
-.symbols-grid {
+.text h4 {
+  color: #DEEFB7;
+}
+.symbols {
+  padding: 50px 25px 50px 200px;
+}
+.grid {
   display: grid;
+  height: 100px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-column-gap: 125px;
+  grid-row-gap: 25px;
+  color: #DEEFB7;
 }
-.checklist {
-  width: 100px;
-  height: 100px;
+.checklist img {
+  width: 75px;
+  height: 75px;
+}
+.attendees img {
+  width: 75px;
+  height: 75px;
+}
+.award img {
+  width: 75px;
+  height: 75px;
+}
+.medals img {
+  width: 75px;
+  height: 75px;
+}
+.h {
+  font-size: 25px;
+  margin: 25px 0 5px;
+}
+.p {
+  font-size: 10px;
+  margin: 5px 0 25px;
 }
 /* subscription */
 .subscription {
   background-color: #2f4858;
   padding: 3% 35%;
   color: #DEEFB7;
+}
+.subscription img {
+  width: 60px;
+  height: 60px;
+  margin-left: 120px;
+}
+.subscription h3 {
+  margin: 4px 73px;
+}
+.subscription p {
+  width: 310px;
+  margin-top: 4px;
 }
 /* footer section */
 footer {
