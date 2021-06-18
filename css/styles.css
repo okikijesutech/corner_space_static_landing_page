@@ -38,6 +38,9 @@ header {
   align-content: center;
   font-size: 40px;
 }
+.header-content span {
+  color: white;
+}
 .header-content button {
   margin-left: 100px;
 }
@@ -48,6 +51,11 @@ header {
   height: 50px;
   padding: 1.2%;
   color: #deefb7;
+}
+.btn:hover {
+  background-color: #deefb7;
+  color: white;
+  transition: 0.6s;
 }
 /* attributes section */
 .attribute {
@@ -88,16 +96,34 @@ header {
 }
 .sofa {
   background-image: linear-gradient(to right bottom, yellow, white);
+  position: relative;
 }
 .bed {
   background-image: linear-gradient(to left bottom, grey, white);
+  position: relative;
 }
 .chair {
-
   background-image: linear-gradient(to right bottom, pink, white);
+  position: relative;
 }
 .cabinet {
   background-image: linear-gradient(to right bottom, orange, white);
+  position: relative;
+}
+.right-img {
+  width: 200px;
+  position: absolute;
+  transform: translate(375px, 90px);
+}
+.right-img img {
+  width: 100%;
+}
+.left-img {
+  width: 100px;
+  position: absolute;
+}
+.left-img img {
+  width: 100%;
 }
 .btn-1 {
   background-color: #682D63;
@@ -107,12 +133,17 @@ header {
   margin: 20px 500px;
   color: white;
 }
-/* features section */
+.btn-1:hover {
+  background: transparent;
+  color: #682D63;
+  border: solid 1px #682D63;
+  transition: 0.6s;
+}
+/* features section */ /* slideshow container */
 .featured h2 {
   color: #682D63;
   margin-left: 600px;
 }
-/* slideshow container */
 .features {
   display: flex;
   flex-direction: row;
@@ -123,7 +154,7 @@ header {
 .card-f {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   max-width: 300px;
-  max-height: 550px;
+  max-height: 600px;
   margin: auto;
   transition: 0.3s;
 }
@@ -132,7 +163,7 @@ header {
   height: 400px;
 }
 .container-f {
-  height: 150px;
+  height: 200px;
   padding: 2px 20px;
 }
 .price {
@@ -147,14 +178,38 @@ header {
 .advert {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(grey 20%, green 60%, grey 20%)
+  position: relative;
+}
+.grey {
+  background: grey;
+  padding: 75px 0;
+}
+.green {
+  background: green;
+  height: 250px;
 }
 .advert-heading {
   margin-left: 250px;
-  margin-top: 75px;
+  margin-top: 20px;
+}
+.boximg {
+  margin-left: 100px;
+  position: absolute;
+  transform: translate(500px, -60px);
 }
 .boximg img {
   width: 300px;
+}
+.block-price {
+  background: #682D63;
+  color: white;
+  padding: 6px;
+}
+.cancled-price {
+  text-decoration: line-through;
+}
+.advert-heading a {
+  font-size: 10px;
 }
 /* Blog section */
 .blog {
@@ -165,13 +220,13 @@ header {
   margin-left: 650px;
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   max-width: 550px;
   max-height: 450px;
   margin: auto;
   transition: 0.3s;
-  border-bottom-left-radius: 50px 50px;
-  border-bottom-right-radius: 50px 50px;
+  border-bottom-left-radius: 30px 30px;
+  border-bottom-right-radius: 30px 30px;
 }
 .card img {
   width: 100%;
@@ -202,6 +257,11 @@ header {
   margin-left: 550px;
   margin-top: 50px;
   padding: 1.5%;
+}
+.btn-3:hover {
+  background: #682D63;
+  color: white;
+  transition: 0.6s;
 }
 /* client feeback section */
 .feedback-section {
@@ -281,28 +341,54 @@ hr {
   margin: 5px 0 25px;
 }
 /* subscription */
+.subscription-out {
+  background: #2f4858;
+  padding: 10px;
+}
 .subscription {
   background-color: #2f4858;
   padding: 3% 35%;
   color: #DEEFB7;
+  border: solid 0.1px #DEEFB7;
 }
 .subscription img {
   width: 60px;
   height: 60px;
-  margin-left: 120px;
+  margin-left: 140px;
 }
 .subscription h3 {
-  margin: 4px 73px;
+  margin: 15px 93px;
 }
 .subscription p {
   width: 310px;
   margin-top: 4px;
+  margin-left: 20px;
+}
+.email {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #DEEFB7;
+  width: 350px;
+  display: inline;
+}
+.email::placeholder {
+  color: #DEEFB7;
+}
+.s-img {
+  display: inline-block;
+  width: 30px;
+  hegiht: 30px;
+}
+.s-img img {
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
 }
 /* footer section */
 footer {
   background-color: black;
   color: #8f8f8f;
-  padding: 0 10px;
+  padding: 12px 27px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -311,4 +397,16 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.c {
+  padding-left: 15px;
+}
+.c p {
+  margin: 5px;
+}
+.g h4 {
+  margin-top: 5px;
+}
+.end {
+  display: flex;
 }
